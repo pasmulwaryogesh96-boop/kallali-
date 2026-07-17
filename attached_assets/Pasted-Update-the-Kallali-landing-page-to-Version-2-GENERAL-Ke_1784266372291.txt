@@ -1,0 +1,302 @@
+Update the Kallali landing page to Version 2.
+
+GENERAL
+- Keep Next.js + Tailwind.
+- Keep the current design language.
+- Keep white background with green accents.
+- Keep smooth animations.
+
+===================================
+GLOBAL CHANGES
+===================================
+
+Replace every mention of:
+
+African -> Indian
+Africa -> India
+Kenya -> Telangana/India
+Swahili -> Telugu
+KSh -> ₹
+Nairobi -> Hyderabad
+
+Remove all fake startup statistics.
+
+Replace them with:
+
+"Launching Soon"
+"Early Access Open"
+"Built for Indian Farmers"
+
+===================================
+NAVBAR
+===================================
+
+Logo: Kallali
+
+Navigation:
+
+Features
+Kemraj AI
+How it Works
+Marketplace
+
+Buttons:
+
+Login
+Get Started
+
+Sticky navbar with blur background while scrolling.
+
+===================================
+HERO
+===================================
+
+Small badge
+
+🌾 India's AI Powered Farming Platform
+
+Headline
+
+Empowering
+Farmers
+with AI.
+
+Subheadline
+
+Manage your farm, finances, marketplace and crops with Kemraj—your AI farming companion built for Indian agriculture.
+
+Buttons
+
+Get Started
+Watch Demo
+
+Below buttons
+
+🌱 Built for Indian farmers
+🤖 Powered by Kemraj AI
+📍 Works across India
+
+RIGHT SIDE
+
+Replace empty area with a modern illustration showing:
+
+Farmer holding smartphone
+
+Kemraj AI Chat
+
+Weather Card
+
+Crop Health Card
+
+Marketplace Price Card
+
+Make it premium.
+
+===================================
+FEATURES
+===================================
+
+Title
+
+Everything you need to manage your farm
+
+Cards
+
+🌦 Weather Intelligence
+
+🪴 Crop Health
+
+🤖 Kemraj AI Assistant
+
+💰 Farm Finance
+
+📒 Digital Farm Diary
+
+🛒 Marketplace
+
+Each card should have:
+
+Beautiful icon
+
+Short description
+
+Hover animation
+
+===================================
+KEMRAJ SECTION
+===================================
+
+Title
+
+Meet Kemraj —
+Your Personal AI Farming Expert
+
+Description
+
+Kemraj understands your crops, soil, weather and farming practices. Ask questions in Telugu, English or Hindi and receive instant AI-powered guidance.
+
+Features
+
+24×7 AI Assistant
+
+Voice Chat
+
+Learns your farm history
+
+Weather Alerts
+
+Disease Detection
+
+Soil Recommendations
+
+Button
+
+Chat with Kemraj
+
+RIGHT SIDE
+
+Beautiful modern AI chat interface.
+
+Conversation:
+
+Farmer:
+My cotton leaves have brown spots.
+
+Kemraj:
+This may indicate fungal infection. Upload a photo so I can analyze it. Based on today's weather, spraying during the evening is recommended.
+
+===================================
+HOW IT WORKS
+===================================
+
+Heading
+
+Getting started is simple
+
+Step 1
+
+Create Farm Profile
+
+Step 2
+
+Add Land
+
+Step 3
+
+Chat with Kemraj
+
+Step 4
+
+Track Growth
+
+Connect all steps with animated line.
+
+===================================
+MARKETPLACE
+===================================
+
+New section
+
+Sell directly to buyers.
+
+Features
+
+Post crops
+
+Buy seeds
+
+Rent equipment
+
+Find nearby buyers
+
+Animated product cards.
+
+===================================
+STATISTICS
+===================================
+
+Instead of fake numbers use
+
+🚀 Launching Soon
+
+🌾 Early Access Open
+
+🇮🇳 Built for Indian Farmers
+
+🤖 AI Powered Platform
+
+===================================
+CTA
+===================================
+
+Green rounded section
+
+Ready to transform your farming?
+
+Join the waitlist and be among the first farmers to experience Kallali.
+
+Buttons
+
+Join Waitlist
+
+Watch Demo
+
+===================================
+FOOTER
+===================================
+
+Columns
+
+Product
+
+Features
+
+Kemraj AI
+
+Marketplace
+
+Weather
+
+Farm Diary
+
+Company
+
+About
+
+Blog
+
+Contact
+
+Careers
+
+Support
+
+Help
+
+Community
+
+Privacy Policy
+
+Terms
+
+Bottom line
+
+Made with ❤️ in India for Indian Farmers 🇮🇳
+
+===================================
+ANIMATIONS
+===================================
+
+Fade in while scrolling.
+
+Hover effects.
+
+Smooth transitions.
+
+Rounded corners.
+
+Soft shadows.
+
+Modern SaaS style.
+
+Professional startup quality.

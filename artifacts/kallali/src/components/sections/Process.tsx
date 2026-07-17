@@ -5,31 +5,27 @@ import { UserPlus, MapPin, Bot, TrendingUp } from "lucide-react";
 const steps = [
   {
     icon: <UserPlus className="w-6 h-6" />,
-    step: "01",
-    title: "Create Your Farm Profile",
+    title: "Create Farm Profile",
     description:
       "Sign up and describe your farm — location, size, crops, and soil type. Takes less than 5 minutes.",
   },
   {
     icon: <MapPin className="w-6 h-6" />,
-    step: "02",
-    title: "Map Your Land",
+    title: "Add Land",
     description:
       "Use your phone to map your farm boundaries. Kallali automatically assigns hyperlocal weather data and soil insights.",
   },
   {
     icon: <Bot className="w-6 h-6" />,
-    step: "03",
     title: "Chat with Kemraj",
     description:
-      "Your AI companion starts learning your farm immediately — ask anything, get instant guidance in your language.",
+      "Your AI companion starts learning your farm immediately. Ask anything in Telugu, Hindi, or English — get instant guidance.",
   },
   {
     icon: <TrendingUp className="w-6 h-6" />,
-    step: "04",
-    title: "Grow and Earn More",
+    title: "Track Growth",
     description:
-      "Track your crops, access live market prices, and sell directly through the Kallali marketplace. More profit, less guesswork.",
+      "Monitor crop health, track market prices, log your diary, and sell directly through the Kallali marketplace.",
   },
 ];
 
@@ -49,7 +45,7 @@ export default function Process() {
             Simple Setup
           </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
-            Up and running in minutes
+            Getting started is simple
           </h2>
           <p className="mt-4 text-lg text-gray-500">
             No training required. If you can use WhatsApp, you can use Kallali.
@@ -58,21 +54,29 @@ export default function Process() {
 
         {/* Steps */}
         <div className="relative">
-          {/* Connector line */}
-          <div className="hidden lg:block absolute top-14 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-200 to-transparent" />
+          {/* Animated connector line */}
+          <div className="hidden lg:block absolute top-14 left-[12.5%] right-[12.5%] h-px">
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              className="h-full bg-gradient-to-r from-green-200 via-kallali-green to-green-200 origin-left"
+            />
+          </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((s, i) => (
               <motion.div
-                key={s.step}
+                key={s.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                transition={{ duration: 0.5, delay: i * 0.12 }}
                 className="relative text-center"
               >
                 {/* Icon circle */}
-                <div className="w-14 h-14 rounded-2xl bg-green-50 border-2 border-green-100 flex items-center justify-center text-kallali-green mx-auto mb-5 relative z-10 bg-white shadow-sm">
+                <div className="w-14 h-14 rounded-2xl bg-white border-2 border-green-100 flex items-center justify-center text-kallali-green mx-auto mb-5 relative z-10 shadow-sm">
                   {s.icon}
                   <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-kallali-green text-white text-[10px] font-bold flex items-center justify-center">
                     {i + 1}

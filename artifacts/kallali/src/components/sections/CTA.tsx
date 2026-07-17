@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, Leaf } from "lucide-react";
+import { ArrowRight, Leaf, Play } from "lucide-react";
 
 export default function CTA() {
   return (
@@ -22,30 +22,33 @@ export default function CTA() {
               <Leaf className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight tracking-tight">
-              Your farm, smarter.
+              Ready to transform
               <br />
-              Starting today.
+              your farming?
             </h2>
             <p className="mt-5 text-lg text-green-100 max-w-xl mx-auto leading-relaxed">
-              Join thousands of farmers already using Kallali to grow more, earn more, and worry less. Free to start — no credit card needed.
+              Join the waitlist and be among the first farmers to experience Kallali — AI-powered farming built for India.
             </p>
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
               <a
                 href="#"
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-white text-kallali-green font-bold text-sm hover:bg-gray-50 transition-all shadow-lg hover:-translate-y-0.5"
               >
-                Get Started Free
+                Join Waitlist
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-white/10 text-white font-semibold text-sm border border-white/20 hover:bg-white/20 transition-all hover:-translate-y-0.5"
               >
-                Talk to our team
+                <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
+                  <Play className="w-2.5 h-2.5 text-white fill-white" />
+                </div>
+                Watch Demo
               </a>
             </div>
             <p className="mt-6 text-sm text-green-200/80">
-              Available on iOS, Android, and web · Works offline · Supports Swahili
+              Available on iOS, Android &amp; web · Works offline · Supports Telugu &amp; Hindi
             </p>
           </div>
         </motion.div>

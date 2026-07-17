@@ -2,9 +2,9 @@
 import { Leaf } from "lucide-react";
 
 const links = {
-  Product: ["Features", "Kemraj AI", "Marketplace", "Farm Diary", "Weather", "Market Prices"],
-  Company: ["About Us", "Blog", "Careers", "Press", "Contact"],
-  Support: ["Help Centre", "Community", "Farmer Stories", "Privacy Policy", "Terms of Service"],
+  Product: ["Features", "Kemraj AI", "Marketplace", "Weather", "Farm Diary"],
+  Company: ["About", "Blog", "Contact", "Careers"],
+  Support: ["Help", "Community", "Privacy Policy", "Terms"],
 };
 
 export default function Footer() {
@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-white tracking-tight">Kallali</span>
             </a>
             <p className="text-sm leading-relaxed text-gray-500 mb-6">
-              Empowering African farmers with AI-powered tools to grow smarter, sell better, and thrive.
+              Empowering Indian farmers with AI-powered tools to grow smarter, sell better, and thrive.
             </p>
             <div className="flex gap-3">
               {["𝕏", "in", "f"].map((s) => (
@@ -43,7 +43,10 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {items.map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">
+                    <a
+                      href="#"
+                      className="text-sm text-gray-500 hover:text-white transition-colors"
+                    >
                       {item}
                     </a>
                   </li>
@@ -54,14 +57,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-600">
-            © 2026 Kallali Technologies Ltd. All rights reserved.
+          <p className="text-xs text-gray-600">© 2026 Kallali Technologies. All rights reserved.</p>
+          <p className="text-xs text-gray-600 flex items-center gap-1.5">
+            Made with ❤️ in India for Indian Farmers 🇮🇳
           </p>
-          <div className="flex items-center gap-1.5 text-xs text-gray-600">
-            <span>Made with</span>
-            <Leaf className="w-3 h-3 text-kallali-green" />
-            <span>for African farmers</span>
-          </div>
         </div>
       </div>
     </footer>

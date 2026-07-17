@@ -23,7 +23,9 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100" : "bg-transparent"
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+          : "bg-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -50,8 +52,11 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-            Log in
+          <a
+            href="#"
+            className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            Login
           </a>
           <a
             href="#"
@@ -93,8 +98,16 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="border-t border-gray-100 mt-2 pt-2 flex flex-col gap-2">
-                <a href="#" className="px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900">Log in</a>
-                <a href="#" className="px-4 py-2.5 rounded-lg bg-kallali-green text-white text-sm font-semibold text-center hover:bg-kallali-green-dark transition-colors">
+                <a
+                  href="#"
+                  className="px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900"
+                >
+                  Login
+                </a>
+                <a
+                  href="#"
+                  className="px-4 py-2.5 rounded-lg bg-kallali-green text-white text-sm font-semibold text-center hover:bg-kallali-green-dark transition-colors"
+                >
                   Get Started
                 </a>
               </div>

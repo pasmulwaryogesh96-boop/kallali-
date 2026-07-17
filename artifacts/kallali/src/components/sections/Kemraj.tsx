@@ -1,31 +1,27 @@
 "use client";
 import { motion } from "framer-motion";
-import { Sparkles, MessageSquare, Mic, Brain } from "lucide-react";
-
-const messages = [
-  {
-    from: "user",
-    text: "My maize leaves are turning yellow. What should I do?",
-  },
-  {
-    from: "ai",
-    text: "This looks like nitrogen deficiency. Given your soil test from March, I recommend applying CAN fertiliser at 50kg/acre. Also check for aphids — conditions this week are favourable for them. Want me to add a treatment reminder to your farm diary?",
-  },
-  {
-    from: "user",
-    text: "Yes please. Also, when is the best time to sell this season?",
-  },
-  {
-    from: "ai",
-    text: "Based on current market trends, maize prices typically peak in August–September in Nairobi markets. I'll alert you when prices hit your target of KSh 4,500/bag.",
-  },
-];
+import { Sparkles, MessageSquare, Mic, Brain, CloudSun, Leaf, ShieldCheck } from "lucide-react";
 
 const capabilities = [
-  { icon: <MessageSquare className="w-5 h-5" />, label: "Chat in English, Swahili, or your local language" },
-  { icon: <Mic className="w-5 h-5" />, label: "Voice input — just speak to Kemraj hands-free" },
-  { icon: <Brain className="w-5 h-5" />, label: "Learns your farm's history every season" },
-  { icon: <Sparkles className="w-5 h-5" />, label: "Proactive alerts before problems occur" },
+  { icon: <MessageSquare className="w-5 h-5" />, label: "24×7 AI Assistant — never offline" },
+  { icon: <Mic className="w-5 h-5" />, label: "Voice Chat in Telugu, Hindi or English" },
+  { icon: <Brain className="w-5 h-5" />, label: "Learns your farm history every season" },
+  { icon: <CloudSun className="w-5 h-5" />, label: "Proactive weather alerts before problems" },
+  { icon: <Leaf className="w-5 h-5" />, label: "Disease detection from a single photo" },
+  { icon: <ShieldCheck className="w-5 h-5" />, label: "Soil health recommendations" },
+];
+
+const messages = [
+  { from: "user", text: "My cotton leaves have brown spots." },
+  {
+    from: "ai",
+    text: "This may indicate fungal infection. Upload a photo so I can analyze it. Based on today's weather in your area, spraying during the evening is recommended for best results.",
+  },
+  { from: "user", text: "Which fungicide should I use?" },
+  {
+    from: "ai",
+    text: "For early blight, Mancozeb 75% WP at 2g/litre works well. Available at your nearest Rythu Seva Kendra. Want me to log this treatment in your farm diary?",
+  },
 ];
 
 export default function Kemraj() {
@@ -45,17 +41,13 @@ export default function Kemraj() {
               Meet Your AI Companion
             </span>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
-              Meet <span className="text-kallali-green">Kemraj</span>,
-              <br />
-              your farming expert.
+              Meet <span className="text-kallali-green">Kemraj</span> —<br />
+              Your Personal AI<br />Farming Expert
             </h2>
             <p className="mt-5 text-lg text-gray-500 leading-relaxed">
-              Kemraj is an AI companion built specifically for African farmers. It understands your crops, your market,
-              and your challenges — and it's available 24/7, even offline.
-            </p>
-            <p className="mt-3 text-base text-gray-400 leading-relaxed">
-              Whether you're dealing with a pest outbreak at 2am or trying to decide which market to sell at, Kemraj
-              has the answer. Trained on local agronomic data, regional weather patterns, and real market prices.
+              Kemraj understands your crops, soil, weather and farming practices. Ask questions in{" "}
+              <span className="font-semibold text-gray-700">Telugu, English or Hindi</span> and
+              receive instant AI-powered guidance.
             </p>
 
             <ul className="mt-8 space-y-3">
@@ -72,7 +64,7 @@ export default function Kemraj() {
             <div className="mt-10">
               <a
                 href="#"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-kallali-green text-white font-semibold text-sm hover:bg-kallali-green-dark transition-all shadow-lg shadow-green-200"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-kallali-green text-white font-semibold text-sm hover:bg-kallali-green-dark transition-all shadow-lg shadow-green-200 hover:-translate-y-0.5"
               >
                 <Sparkles className="w-4 h-4" />
                 Chat with Kemraj
@@ -80,7 +72,7 @@ export default function Kemraj() {
             </div>
           </motion.div>
 
-          {/* Right — chat UI mockup */}
+          {/* Right — chat UI */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -96,7 +88,7 @@ export default function Kemraj() {
                 <div>
                   <p className="text-sm font-bold text-gray-900">Kemraj</p>
                   <p className="text-xs text-kallali-green font-medium flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-kallali-green inline-block" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-kallali-green inline-block animate-pulse" />
                     Online — ready to help
                   </p>
                 </div>
@@ -139,7 +131,7 @@ export default function Kemraj() {
               {/* Input bar */}
               <div className="px-5 py-4 border-t border-gray-100 bg-white flex items-center gap-3">
                 <div className="flex-1 h-10 rounded-xl bg-gray-50 border border-gray-200 px-4 flex items-center">
-                  <span className="text-sm text-gray-400">Ask Kemraj anything…</span>
+                  <span className="text-sm text-gray-400">Ask in Telugu, Hindi or English…</span>
                 </div>
                 <button className="w-10 h-10 rounded-xl bg-kallali-green flex items-center justify-center hover:bg-kallali-green-dark transition-colors flex-shrink-0">
                   <Mic className="w-4 h-4 text-white" />
