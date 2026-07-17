@@ -1,25 +1,15 @@
-import Navbar from './components/sections/Navbar';
-import Hero from './components/sections/Hero';
-import Features from './components/sections/Features';
-import Kemraj from './components/sections/Kemraj';
-import Process from './components/sections/Process';
-import Marketplace from './components/sections/Marketplace';
-import Stats from './components/sections/Stats';
-import CTA from './components/sections/CTA';
-import Footer from './components/sections/Footer';
+import { Switch, Route } from 'wouter';
+import Landing from './pages/Landing';
+import Signup from './pages/Signup';
 
 export default function App() {
   return (
-    <main className="flex flex-col min-h-screen">
-      <Navbar />
-      <Hero />
-      <Features />
-      <Kemraj />
-      <Process />
-      <Marketplace />
-      <Stats />
-      <CTA />
-      <Footer />
-    </main>
+    <Switch>
+      <Route path="/" component={Landing} />
+      <Route path="/signup" component={Signup} />
+      <Route>
+        <Landing />
+      </Route>
+    </Switch>
   );
 }

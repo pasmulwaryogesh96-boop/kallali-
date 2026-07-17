@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Leaf } from "lucide-react";
+import { Link } from "wouter";
 
 const links = [
   { label: "Features", href: "#features" },
@@ -52,18 +53,18 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href="#"
+          <Link
+            href="/login"
             className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
           >
             Login
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/signup"
             className="px-4 py-2 rounded-lg bg-kallali-green text-white text-sm font-semibold hover:bg-kallali-green-dark transition-colors shadow-sm"
           >
             Get Started
-          </a>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -98,18 +99,19 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="border-t border-gray-100 mt-2 pt-2 flex flex-col gap-2">
-                <a
-                  href="#"
-                  className="px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900"
+                <Link
+                  href="/login"
+                  className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Login
-                </a>
-                <a
-                  href="#"
-                  className="px-4 py-2.5 rounded-lg bg-kallali-green text-white text-sm font-semibold text-center hover:bg-kallali-green-dark transition-colors"
+                </Link>
+                
+                <Link
+                  href="/signup"
+                  className="px-4 py-2 rounded-lg bg-kallali-green text-white text-sm font-semibold hover:bg-kallali-green-dark transition-colors shadow-sm"
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
