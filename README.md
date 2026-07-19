@@ -1,7 +1,8 @@
-# 🌾 Kallali — AI-Powered Farmer Marketplace
+# 🌾 Kallali — Open-Source Farmer Marketplace
 
-> Building in public 🚀  
-> An open-source full-stack agricultural marketplace connecting farmers directly with buyers. AI-powered farming features are planned as the project evolves.
+> Building in public 🚀
+> An open-source full-stack agricultural marketplace connecting farmers and buyers.
+> AI-powered farming features are planned as the project evolves.
 
 ![Status](https://img.shields.io/badge/Status-Active%20Development-success)
 ![Backend](https://img.shields.io/badge/Backend-Express.js-black)
@@ -32,13 +33,12 @@ Many farmers face challenges such as:
 - Limited access to modern farming guidance
 - Difficulty managing products digitally
 
-Kallali aims to solve these problems through technology.
-
+Kallali is being built to address these challenges through a secure digital marketplace, with AI-powered farming features planned for future releases.
 ---
 
 # 🚀 Vision
 
-Build a complete digital ecosystem for agriculture that includes:
+The long-term vision for Kallali includes:
 
 - 🏪 Farmer-to-Buyer Marketplace
 - 🤖 AI Farming Assistant
@@ -227,21 +227,21 @@ Allow / Deny
 
 ```
 kallali/
-
-frontend/
-
-backend/
- ├── src
- │
- ├── routes
- │
- ├── middlewares
- │
- ├── lib
- │
- ├── db
- │
- └── index.ts
+├── backend/
+│   ├── src/
+│   ├── db/
+│   ├── routes/
+│   ├── middlewares/
+│   ├── lib/
+│   └── README.md
+│
+├── frontend/
+│   └── README.md
+│
+├── README.md
+├── CONTRIBUTING.md
+├── LICENSE
+└── .gitignore
 ```
 
 ---
@@ -265,6 +265,10 @@ backend/
 | Deployment | ⏳ Planned |
 
 ---
+
+> **Note**
+>
+> Kallali is under active development. Some features described in this README represent the planned roadmap and are not yet implemented.
 
 # 🛣 Roadmap
 
@@ -314,17 +318,22 @@ backend/
 
 # 🎓 Skills Demonstrated
 
-- REST API Development
-- Authentication & Authorization
+## Current Technologies
+
 - Express.js
 - PostgreSQL
 - Drizzle ORM
 - TypeScript
 - JWT
 - bcrypt
-- Middleware Design
-- Database Design
-- Git & GitHub
+- REST APIs
+
+ ## Planned Technologies
+
+- React
+- AI Integrations
+- Payments
+- Deployment
 
 ---
 
@@ -378,6 +387,15 @@ Contributions, suggestions, and feedback are always welcome.
 
 ---
 
+# 📢 Building in Public
+
+Kallali is an open-source project that I'm building and documenting publicly.
+
+The goal is not only to create a useful product but also to learn, share progress, and improve through community feedback.
+
+Issues, suggestions, and contributions are always welcome.
+
+---
 # 📄 License
 
 This project is licensed under the MIT License.
@@ -392,4 +410,4 @@ It motivates me to continue building Kallali in public.
 
 ---
 
-**Built with ❤️ to empower farmers through technology.**
+**Built with ❤️ while learning, building in public, and supporting digital agriculture.**
