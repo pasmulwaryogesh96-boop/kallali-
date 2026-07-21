@@ -642,8 +642,6 @@ Planned screenshots include:
 - Buyer Marketplace
 - AI Assistant
 
-**💡 Tip:** Add a screenshot of your login or dashboard page here to give visitors a quick visual preview of the application!
-
 ---
 
 # 🤝 Contributing
@@ -673,8 +671,6 @@ git push origin feature/your-feature
 ```
 
 5. Open a Pull Request
-
-Please make sure your code follows the existing coding style.
 
 ---
 
