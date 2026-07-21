@@ -176,22 +176,56 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const set = (field: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     const errs = validate(form);
+
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-    setSubmitted(true);
-  };
 
+    try {
+      setLoading(true);
+
+      const response = await fetch("/api/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName: form.fullName,
+          email: form.email,
+          mobile: form.mobile,
+          password: form.password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.message);
+        return;
+      }
+
+      setSubmitted(true);
+
+    } catch (error) {
+      console.error(error);
+      alert("Unable to connect to server.");
+    } finally {
+      setLoading(false);
+    }
+  };
+     
   return (
     <div className="min-h-screen flex">
       {/* ── Left panel — branding ── */}
@@ -285,7 +319,7 @@ export default function Signup() {
                 Welcome to Kallali, {form.fullName.split(" ")[0]}. Your AI farming companion Kemraj is ready for you.
               </p>
               <Link
-                href="/"
+                href="/onboarding"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-kallali-green text-white font-semibold text-sm hover:bg-kallali-green-dark transition-all shadow-lg shadow-green-200"
               >
                 Go to Dashboard
@@ -388,9 +422,10 @@ export default function Signup() {
                 {/* Submit */}
                 <button
                   type="submit"
+                  disabled={loading}
                   className="w-full flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-kallali-green text-white font-bold text-sm hover:bg-kallali-green-dark transition-all shadow-lg shadow-green-200 hover:shadow-green-300 hover:-translate-y-0.5 active:translate-y-0 mt-2"
                 >
-                  Create Account
+                  {loading ? "Creating Account..." : "Create Account"}
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </form>
