@@ -747,10 +747,9 @@ Final Year B.Tech Student | Full-Stack Developer | Open-Source Enthusiast
 
 Currently building **Kallali** in public while learning modern full-stack development.
 
-**GitHub:** https://github.com/pasmulwaryogesh96-boop
+**GitHub:** [pasmulwaryogesh96-boop](https://github.com/pasmulwaryogesh96-boop)
 
-**LinkedIn:** (Add your LinkedIn profile URL here)
-
+**LinkedIn:** [Yogesh Pasmulwar](https://www.linkedin.com/in/yogesh-pasmulwar-4528aa377/)
 ---
 
 <p align="center">
